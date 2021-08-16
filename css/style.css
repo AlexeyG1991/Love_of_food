@@ -1090,7 +1090,7 @@ h1, h2, h3, h4, h5, h6 {
 .wrapper .footer .footer-container .footer-container__info .footer-container__info-item_language::after {
   content: "";
   position: absolute;
-  width: 10px;
+  width: 11px;
   height: 9px;
   right: 30px;
   background: url(../img/arrow.png) no-repeat;
