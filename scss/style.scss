@@ -819,13 +819,8 @@ $xs: 400px;
                         a {
                             margin-right: 20px;
                             padding-bottom: 5px;
-                            // transform: rotate(0deg);
-                            transition: all 0.5s ease 0s;
                             &:last-child {
                                 margin-right: 0;
-                            }
-                            &:hover {
-                                transform: rotate(20deg);
                             }
                         }
                     }
