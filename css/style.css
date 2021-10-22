@@ -1150,15 +1150,9 @@ h1, h2, h3, h4, h5, h6 {
 .wrapper .footer .footer-container__info-item_social a {
   margin-right: 20px;
   padding-bottom: 5px;
-  -webkit-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
 }
 .wrapper .footer .footer-container__info-item_social a:last-child {
   margin-right: 0;
-}
-.wrapper .footer .footer-container__info-item_social a:hover {
-  -webkit-transform: rotate(20deg);
-          transform: rotate(20deg);
 }
 .wrapper .footer .footer-container__info-item_link {
   display: -webkit-box;
