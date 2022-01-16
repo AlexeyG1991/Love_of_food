@@ -9,6 +9,11 @@ const langArr = {
         "en": "There is no Sincerer Love than the <span>love of food.</span>",
         "ru": "Нет более искренней любви, чем <span>любовь к еде.</span>",
     },
+    "title-text": {
+        "ua": "У боротьбі між серцем і головою зрештою перемагає шлунок.",
+        "en": "In the struggle between the heart and the head, the stomach eventually wins.",
+        "ru": "В борьбе между сердцем и головой в конце концов побеждает желудок.",
+    },
     "button-header": {
         "ua": "Замовлення",
         "en": "Place an Order",
@@ -134,4 +139,19 @@ const langArr = {
         "en": "Download Uber Eates App From :",
         "ru": "Скачать приложение Uber Eates с:",
     },
+    "modal__title": {
+        "ua": "Ми зв'яжемось з Вами!",
+        "en": "We will contact you!",
+        "ru": "Мы свяжемся с Вами!",
+    },
+    "modal__name": {
+        "ua": "Ваше ім'я",
+        "en": "Your name",
+        "ru": "Ваше имя",
+    },
+    "modal__phone": {
+        "ua": "Ваш номер телефону",
+        "en": "Your phone",
+        "ru": "Ваш номер телефона",
+    }
 }

@@ -10,7 +10,6 @@
 </head>
 
 <body>
-
     <div class="wrapper">
         <section class="header">
             <meta property="og:image" content="img/small.png" />
@@ -19,13 +18,14 @@
             </div>
             <div class="bg_g"></div>
             <div class="container parallax">
-                <button class="button-main button-main__sing lng-button-main__sing">Sign up</button>
+                <button data-modal class="button-main button-main__sing lng-button-main__sing">Sign up</button>
                 <div class="header-content">
                     <div class="header-order">
                         <h1 class="title lng-title-header">There is no Sincerer Love than the <span>love of food.</span>
                         </h1>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
-                        <button class="button-main lng-button-header">Place an Order</button>
+                        <p class="lng-title-text">In the struggle between the heart and the head, the stomach eventually
+                            wins.</p>
+                        <button data-modal class="button-main lng-button-header">Place an Order</button>
                     </div>
                     <div class="header-image">
                         <div class="header-image__item header-image__parsley">
@@ -51,11 +51,11 @@
                         <h2 class="title title-right lng-title-find-foot">Discover restaurants that <span>deliver near
                                 you.</span>
                         </h2>
-                        <form class="restaurants-input">
-                            <input placeholder="Enter your delivery address" tabindex="1" name="address" type="text">
+                        <div class="restaurants-input">
+                            <input placeholder="Enter your delivery address" tabindex="1" type="text">
                             <button class="button-main lng-button-find-foot" tabindex="2" type="submit">Find
                                 Food</button>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -255,6 +255,28 @@
                 <div class="footer-container__year lng-footer-container__year">© 2020 Uber Technologies Inc</div>
             </footer>
         </section>
+
+        <div class="modal">
+            <div class="modal-dialog">
+                <div class="modal-dialog__title">
+                    <div class="lng-modal__title">We will contact you!</div>
+                    <div data-close class="modal__close">x</div>
+                </div>
+                <div class="modal-dialog__content">
+                    <div class="modal-name-phone">
+                        <div class="modal-name-phone__block">
+                            <p class="lng-modal__name">Your name</p>
+                            <input name="username" type="text" placeholder="...">
+                        </div>
+                        <div class="modal-name-phone__block">
+                            <p class="lng-modal__phone">Your phone</p>
+                            <input name="userphone" type="tel" placeholder="+30...">
+                        </div>
+                    </div>
+                    <button class="button-main">OK!</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="js/lang.js"></script>
