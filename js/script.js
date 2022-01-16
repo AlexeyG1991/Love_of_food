@@ -84,9 +84,10 @@ document.querySelector('.select').addEventListener('click', () => {
     document.querySelector('.footer-container__info-item_language').classList.toggle('active');
 });
 
+
 // -------------------------------------------------------------------
 // переключение языков
-const select = document.querySelector('select');
+const select = document.querySelector('.select');
 const allLang = ['en', 'ru', 'ua'];
 
 select.addEventListener('change', changeURLLanguage);
@@ -100,7 +101,7 @@ function changeURLLanguage() {
 
 function changeLanguage() {
     let hash = window.location.hash;
-    hash = hash.substr(1);
+    hash = hash.substring(1);
     console.log(hash);
     if (!allLang.includes(hash)) {
         location.href = window.location.pathname + '#en';
@@ -124,9 +125,10 @@ function onEntry(entry) {
     entry.forEach(change => {
         if (change.isIntersecting) {
             change.target.classList.add('element-show');
-        } else {
-            change.target.classList.remove('element-show');
         }
+        // else {
+        //     change.target.classList.remove('element-show');
+        // }
     });
 }
 
@@ -137,3 +139,38 @@ let elements = document.querySelectorAll('.title');
 for (let elm of elements) {
     observer.observe(elm);
 }
+
+
+// ++++++++++++++++++++++++++++ Modal +++++++++++++++++++++++++++++++++
+const modalTrigger = document.querySelectorAll('[data-modal]'),
+    modal = document.querySelector('.modal'),
+    modalContent = document.querySelector('.modal-dialog'),
+    modalCloseBtn = document.querySelector('[data-close]');
+
+function closeModal() {
+    modal.classList.toggle('show');
+    modalContent.classList.toggle('show');
+    document.body.style.overflow = '';
+}
+
+modalTrigger.forEach(btn => {
+    btn.addEventListener('click', () => {
+        modal.classList.toggle('show');
+        modalContent.classList.toggle('show');
+        document.body.style.overflow = 'hidden';
+    });
+});
+
+modalCloseBtn.addEventListener('click', closeModal);
+
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        closeModal();
+    }
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.code === "Escape" && modal.classList.contains('show')) {
+        closeModal();
+    }
+});
